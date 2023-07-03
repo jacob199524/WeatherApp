@@ -1,24 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4004705023548280" crossorigin="anonymous"></script>
+</head>
+
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather App</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-          <h1>Weather App</h1>
-          <div class="search-form-wrapper">
-            <form onsubmit="return getWeather()">
-              <input type="text" id="city" placeholder="Enter city name" required>
-              <button type="submit">Get Weather</button>
-            </form>
-            <div id="result"></div>
-          </div>
+  <div class="container">
+    <h1>Weather App</h1>
+    <div class="search-form-wrapper">
+      <form onsubmit="return getWeather()">
+        <label for="state">State:</label>
+        <input type="text" id="state" placeholder="Enter state" required>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" placeholder="Enter city name" required>
+
+        <button type="submit">Get Weather</button>
+      </form>
+      <div id="resultForecastContainer">
+        <div id="result"></div>
+        <div id="forecast">
+          <h3><span id="forecast-city"></span></h3>
+          <div id="forecast-cards"></div>
         </div>
-      
-        <script src="java.js"></script>
-      </body>
-    </html>
+      </div>
+    </div>
+  </div>
+
+  <script src="java.js"></script>
+</body>
+
+</html>
