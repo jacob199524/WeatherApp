@@ -6,13 +6,50 @@
 }
 
 body {
-  background-color: #1E90FF;
+  background-color: lightgray;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center; 
+  width: 100%; 
+}
+
+.nav-links li {
+  list-style: none;
+  display: inline-block;
+  padding: 20px 1px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: #008080;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+h1 {
+  text-align: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; 
+  height: 100vh;
 }
 
 .search-form-wrapper {
@@ -22,11 +59,6 @@ body {
   padding: 30px 40px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 60px;
 }
 
 input {
@@ -65,19 +97,6 @@ button:hover {
   border-radius: 5px;
 }
 
-a {
-  color: #1E90FF;
-  font-size: 14px;
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 #forecast {
   width: 100%;
   margin-top: 20px;
@@ -109,9 +128,46 @@ a:hover {
   margin-right: 5px;
 }
 
-/* Media query to make the forecast cards stack vertically on smaller screens */
+
 @media (max-width: 768px) {
   .forecast-card {
     width: 150px;
   }
+}
+
+
+.footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f0f0f0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  color: black;
+  text-align: center;
+}
+
+.footer-logo h4 {
+  margin: 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-links li {
+  margin-right: 10px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
 }
