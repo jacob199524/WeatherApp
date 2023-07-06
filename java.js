@@ -48,11 +48,11 @@ function getWeather() {
       const temperatureCelsius = data.main.temp;
       const temperatureFahrenheit = (temperatureCelsius * 9 / 5) + 32;
 
-      resultElement.innerHTML = `Current temperature in ${city}, ${state} is ${temperatureFahrenheit.toFixed(2)}°F`;
+      resultElement.innerHTML = `Temperature in ${city}, ${state} is ${temperatureFahrenheit.toFixed(2)}°F`;
       resultElement.style.display = "block";
 
       // Store the city name for forecast display
-      document.getElementById("forecast-city").innerText = `${city}, ${state}`;
+      document.getElementById("forecast-city").innerText = `24 hour forecast for ${city}, ${state}`;
 
       return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=metric`);
     })
